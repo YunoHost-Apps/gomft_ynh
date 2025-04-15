@@ -3,7 +3,7 @@
 packaging_format = 2
 
 id = "gomft"
-name = "<goMFT"
+name = "GoMFT"
 description.en = "Managed File Transfer"
 description.fr = "Gestion de transfert de fichiers"
 
