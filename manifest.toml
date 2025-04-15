@@ -13,10 +13,8 @@ maintainers = ["eric_G"]
 
 [upstream]
 license = "MIT"
-website = "https://example.com"
-demo = "https://demo.example.com"
-admindoc = "https://yunohost.org/packaging_apps"
-userdoc = "https://yunohost.org/apps"
+website = "https://starfleetcptn.github.io/GoMFT/"
+admindoc = "https://starfleetcptn.github.io/GoMFT/docs/introduction/overview"
 code = "https://github.com/StarFleetCPTN/GoMFT"
 
 [integration]
