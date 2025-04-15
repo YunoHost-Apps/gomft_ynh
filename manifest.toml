@@ -1,0 +1,71 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "gomft"
+name = "<goMFT"
+description.en = "Managed File Transfer"
+description.fr = "Gestion de transfert de fichiers"
+
+version = "0.2.11~ynh1"
+
+maintainers = ["eric_G"]
+
+[upstream]
+license = "MIT"
+website = "https://example.com"
+demo = "https://demo.example.com"
+admindoc = "https://yunohost.org/packaging_apps"
+userdoc = "https://yunohost.org/apps"
+code = "https://github.com/StarFleetCPTN/GoMFT"
+
+[integration]
+yunohost = ">= 12.0.9"
+helpers_version = "2.1"
+architectures = "all"
+multi_instance = true
+
+ldap = false
+
+sso = false
+
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+[resources]
+
+    [resources.sources]
+
+    [resources.sources.main]
+    amd64.url = "https://github.com/StarFleetCPTN/GoMFT/releases/download/v0.2.11/gomft-v0.2.11-linux-amd64"
+    amd64.sha256 = "71a3da3eec04a6da800d580ca2841a70a6f9f717ede925a9e15b9c4a8ff80d68"
+    arm64.url = "https://github.com/StarFleetCPTN/GoMFT/releases/download/v0.2.11/gomft-v0.2.11-linux-arm64"
+    arm64.sha256 = "f4d4d3a9d35f3a800d768ba6d4808e70627eed7ad95c46ef781181d73ea105dd"
+    in_subdir = false
+    rename = "gomft"
+
+    # autoupdate.strategy = "latest_github_tag"
+
+    [resources.system_user]
+    allow_email = true
+
+    [resources.install_dir]
+
+    [resources.data_dir]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.ports]
+
+    [resources.apt]
+    packages = "rclone, sqlite3"
