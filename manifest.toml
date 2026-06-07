@@ -31,6 +31,9 @@ disk = "50M"
 ram.build = "50M"
 ram.runtime = "50M"
 
+[antifeatures]
+deprecated-software.en = "Upstream is archived, this app won't receive future updates"
+
 [install]
     [install.domain]
     type = "domain"
