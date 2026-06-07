@@ -7,7 +7,7 @@ name = "GoMFT"
 description.en = "Managed File Transfer"
 description.fr = "Gestion de transfert de fichiers"
 
-version = "0.2.11~ynh1"
+version = "0.2.11~ynh2"
 
 maintainers = ["eric_G"]
 
@@ -30,6 +30,9 @@ sso = false
 disk = "50M"
 ram.build = "50M"
 ram.runtime = "50M"
+
+[antifeatures]
+deprecated-software.en = "Upstream is archived, this app won't receive future updates"
 
 [install]
     [install.domain]
